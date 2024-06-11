@@ -1,7 +1,6 @@
 # Desativar as CPUs
 
-Isso é necessário somente se o Processador tiver arquitetura híbrida como da Intel, depois da 12 geração, e o SLURM não tenha sido stualizado para reconhecer essa arquitetura. Esse tipo de arquitetura faz com que o SLURM não entenda a quantidade de núcleos e threa
-ds, que deveriam ser múltiplos. Para esse exmeplo será o i7-12700KF, que possui 8 P-cores (2 threads por núcleo) e 4 E-cores (1 thread por núcleo) totalizando 12 núcleos e 20 threads. Assim, o como forma de fazer o SLURM reconhecer a CPU a solução alternativa enco
+Isso é necessário somente se o Processador tiver arquitetura híbrida como da Intel, depois da 12 geração, e o SLURM não tenha sido stualizado para reconhecer essa arquitetura. Esse tipo de arquitetura faz com que o SLURM não entenda a quantidade de núcleos e threads, que deveriam ser múltiplos. Para esse exmeplo será o i7-12700KF, que possui 8 P-cores (2 threads por núcleo) e 4 E-cores (1 thread por núcleo) totalizando 12 núcleos e 20 threads. Assim, o como forma de fazer o SLURM reconhecer a CPU a solução alternativa enco
 ntrada foi desativar o uso dos E-cores.
 
 

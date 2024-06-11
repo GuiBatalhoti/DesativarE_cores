@@ -16,6 +16,8 @@ A frase "Of course, it's Linux. So there is a way to force anything to do someth
 
 # Como desativar
 
+Para esse exmeplo será o i7-12700KF, que possui 8 P-cores (2 threads por núcleo) e 4 E-cores (1 thread por núcleo) totalizando 12 núcleos e 20 threads. Assim, o como forma de fazer o SLURM reconhecer a CPU a solução alternativa enco
+
 1. Primeiramente, entrar no site da Intel e verificar qual a arquitetura do processador usado na máquina, assim conseguimos verificar qual a CPU evitando erros;
 
 2. Fazer ssh como root na máquina na qual os E-cores serão desativados;
@@ -40,7 +42,3 @@ A frase "Of course, it's Linux. So there is a way to force anything to do someth
 6. Pronto, núcleos desativados. Para verificar se os E-cores foram desativados, podemos usar o comando ```lscpu``` novamente e verificar a saída.
 
     ![Alt text](./desativarCPU.png "Desativar CPUs output")
-
-
-# Arquivos
-
