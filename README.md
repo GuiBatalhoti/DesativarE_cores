@@ -4,9 +4,7 @@ Esse reposítório contém a descrição de como desativar os núcleos de efici�
 
 Esse tipo de arquitetura faz com que o [SLURM](https://slurm.schedmd.com/overview.html) (gerenciador de filas do [lsncs](https://www.fct.unesp.br/#!/labsimnum)) não interprete corretamente a CPU, que para o SLURM a quantidade de núcleos e threads do processador deveriam ser múltiplos. As configurações no SLURM são indicadas da seguinte forma:
 
-```
-console
-```
+![Linhas de especificação de nós no arquivo "slurm.conf". Mostrando que threads e núcleos são múltiplos.](./slurm_conf.png "SLURM output")
 
 Assim, após ver o seguinte vídeo (sem ligação alguma com o conteúdo, apenas sendo um tópico de Linux), no minuto 5:15:
 
@@ -23,7 +21,7 @@ Para esse exmeplo será o i7-12700KF, que possui 8 P-cores (2 threads por núcle
 2. Fazer ssh como root na máquina na qual os E-cores serão desativados;
 
 3. Usar o comando e verificar a saída;
-    ![Alt text](./lscpu_e.png "lscpu output")
+    ![Print do output do comando "lscpu -e, listando os 12 núcleos e suas 20 respectivas threads (CPU i7-12700KF).](./lscpu_e.png "lscpu output")
 
     1. Podemos observar que a lista de CPU vai de 0-20 (20 threads);
     2. Também, na lista de CORE temos números de 0-11 (12 núcleos);
@@ -41,4 +39,4 @@ Para esse exmeplo será o i7-12700KF, que possui 8 P-cores (2 threads por núcle
     ```
 6. Pronto, núcleos desativados. Para verificar se os E-cores foram desativados, podemos usar o comando ```lscpu``` novamente e verificar a saída.
 
-    ![Alt text](./desativarCPU.png "Desativar CPUs output")
+    ![Print do output do comando "lscpu -e, listando os 12 núcleos e suas 20 respectivas threads (CPU i7-12700KF) após desativar os E-cores.](./desativarCPU.png "Desativar CPUs output")
